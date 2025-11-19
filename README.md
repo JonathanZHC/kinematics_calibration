@@ -80,7 +80,7 @@ cd src/calibration_tools/calibration_tools/
 ```
 Run the script:
 ```bash
-python3 record_joint_states_dataset.py --joint-state-topic-name /joint_states --robot-name fr3_1  --tool-position-on-table front
+python3 record_joint_states_dataset.py --joint-state-topic-name /joint_states --robot-name fr3_1  --tool-position-on-table front --joint-names fr3_joint1 fr3_joint2 fr3_joint3 fr3_joint4 fr3_joint5 fr3_joint6 fr3_joint7
 ```
 - Press 'a' to add a new joint configuration that has the sphere in the socket that the displayed in the algorithm.
 - Presss 'd' to delete the last joint configuration from the list
