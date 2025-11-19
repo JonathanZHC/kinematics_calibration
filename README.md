@@ -69,8 +69,6 @@ Clone the project:
 ```bash
 git clone git@github.com:JonathanZHC/kinematics_calibration.git
 cd kinematics_calibration
-git fetch --all
-git checkout ros2_integration
 pip3 install -e .
 ```
 Build project
