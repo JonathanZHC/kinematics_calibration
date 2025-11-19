@@ -63,24 +63,31 @@ What to do when the code runs:
 - Press 'q' when you have finished recording. 
 
 
-### Record data with a Franka 
+### Record data with ros2
 ![Alt Text](imgs/mukca_franka.gif)
-
-As controllers, we suggest to use the [Human Friendly Controllers](https://github.com/franzesegiovanni/franka_human_friendly_controllers.git). You can also lunch any controller of [franka_ros](https://github.com/frankaemika/franka_ros.git). It is important to check that the joint state can be echoed. 
-
-When using a Franka, we give the possibility of using the buttons on the end effector to add data or switch between holes. 
-Run the record_joint_states_panda node, e.g., 
+Clone the project:
 ```bash
-rosrun calibration_tools record_joint_states_panda --joint-state-topic-name /joint_states --robot-name panda_1 --config-file panda_1.yaml --tool-position-on-table front 
+git clone git@github.com:JonathanZHC/kinematics_calibration.git
+cd kinematics_calibration
+git fetch --all
+git checkout ros2_integration
+pip3 install -e .
 ```
-
-- Press 'check' to add a data point
-- Press 'down' to delete the last data point
-- Press 'o' to switch between holes
-- Press 'x' to save the data and quit.
-
-You need to create a config file for the panda in 
-'ros_ws/src/calibration_tools/config/<robot-name>' where you are specifying: hostname, username, password,that are the IP for the panda, the username and password used to access the Desk interface. 
+Build project
+```bash
+cd ros2_ws
+colcon build
+source install/setup.bash
+cd src/calibration_tools/calibration_tools/
+```
+Run the script:
+```bash
+python3 record_joint_states_dataset.py --joint-state-topic-name /joint_states --robot-name fr3_1  --tool-position-on-table front
+```
+- Press 'a' to add a new joint configuration that has the sphere in the socket that the displayed in the algorithm.
+- Presss 'd' to delete the last joint configuration from the list
+- Press 's' when you switch the hole in which you are recording
+- Press 'q' when you have finished recording.
 
 ## Calibrate the urdf model
 We are ready to optimize our model. 
