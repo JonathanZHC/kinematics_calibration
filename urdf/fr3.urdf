@@ -565,4 +565,74 @@
     <parent link="fr3_link7"/>
     <child link="fr3_link8"/>
   </joint>
+  <joint name="fr3_hand_joint" type="fixed">
+    <parent link="fr3_link8"/>
+    <child link="fr3_hand"/>
+    <origin rpy="0 0 -0.7853981633974483" xyz="0 0 0"/>
+  </joint>
+  <!-- sub-link defining detailed ../meshes/panda for collision with environment -->
+  <link name="fr3_hand">
+    <visual>
+      <geometry>
+        <mesh filename="../meshes/fr3/hand.dae"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="fr3_hand_tcp"/>
+  <joint name="fr3_hand_tcp_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.1034"/>
+    <parent link="fr3_hand"/>
+    <child link="fr3_hand_tcp"/>
+  </joint>
+  <link name="ball_link">
+    <visual>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="ball_joint" type="fixed">
+    <!-- Panda Default -->
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0018201675662181923 -0.008005260162147827 0.03370209400757424" />
+    <parent link="fr3_hand_tcp"/>
+    <child link="ball_link"/>
+  </joint>
+  <link name="fr3_leftfinger">
+    <visual>
+      <geometry>
+        <mesh filename="../meshes/fr3/finger.dae"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="fr3_rightfinger">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="../meshes/fr3/finger.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+    <joint name="fr3_finger_joint1" type="prismatic">
+    <parent link="fr3_hand" />
+    <child link="fr3_leftfinger" />
+    <origin rpy="0 0 0" xyz="0 0 0.0584" />
+    <axis xyz="0 1 0" />
+    <limit effort="100" lower="0.0" upper="0.04" velocity="0.2" />
+    <dynamics damping="0.3" />
+  </joint>
+  <joint name="fr3_finger_joint2" type="prismatic">
+    <parent link="fr3_hand" />
+    <child link="fr3_rightfinger" />
+    <origin rpy="0 0 0" xyz="0 0 0.0584" />
+    <axis xyz="0 -1 0" />
+    <limit effort="100" lower="0.0" upper="0.04" velocity="0.2" />
+    <mimic joint="fr3_finger_joint1" />
+    <dynamics damping="0.3" />
+  </joint>
 </robot>
