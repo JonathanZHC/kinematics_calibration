@@ -1,0 +1,66 @@
+haocheng@haocheng-Alienware-m15-R6:~/kinematics_calibration/scripts$ python3 compute_improved_performance.py --model fr3_1
+Model folder: /home/haocheng/kinematics_calibration/scripts/../calibrated_urdf/fr3_1
+Training data: ['/home/haocheng/kinematics_calibration/data/fr3_1/front_right']
+Evaluation data: ['/home/haocheng/kinematics_calibration/data/fr3_1/front_left', '/home/haocheng/kinematics_calibration/data/fr3_1/front']
+Offset distance: 0.05
+Step 0
+Step 7
+The mean absolute error  went from 6.20e-03 to 6.33e-04 on the train data on average
+Percentage of removed error on train set: 89.80
+Estimated sockets position in training set:
+Socket 1			Socket 2
+ & 0.447 -0.281 -0.015 & 0.447 -0.231 -0.015 \ \ Distance: 0.050 
+The mean absolute error  went from 5.40e-03 to 8.52e-04 on the test data on average
+Percentage of removed error on test set: 84.14
+Estimated Socket positions in test set:
+Socket 1			Socket 2
+ & 0.405 0.278 -0.014 & 0.406 0.328 -0.013 \ \ Distance: 0.050 
+ & 0.526 -0.002 -0.015 & 0.527 0.047 -0.014 \ \ Distance: 0.050 
+
+========================================================================================================================
+SIGNIFICANT PARAMETER CHANGES (threshold: 1.0e-06)
+========================================================================================================================
+Parameter                      Initial Value             Final Value               Change               |Change|       
+------------------------------------------------------------------------------------------------------------------------
+ball_joint_xyz_x               -1.820168e-03             -7.811118e-04             1.039056e-03         1.039056e-03   
+ball_joint_xyz_y               -8.005260e-03             -1.472429e-04             7.858017e-03         7.858017e-03   
+ball_joint_xyz_z               3.370209e-02              3.439180e-02              6.897049e-04         6.897049e-04   
+fr3_joint2_xyz_x               0.000000e+00              -8.948689e-05             -8.948689e-05        8.948689e-05   
+fr3_joint2_xyz_y               0.000000e+00              5.756224e-04              5.756224e-04         5.756224e-04   
+fr3_joint2_rpy_roll            -1.570796e+00             -1.571906e+00             -1.109432e-03        1.109432e-03   
+fr3_joint2_rpy_pitch           0.000000e+00              3.344044e-03              3.344044e-03         3.344044e-03   
+fr3_joint3_xyz_x               0.000000e+00              8.172878e-04              8.172878e-04         8.172878e-04   
+fr3_joint3_xyz_y               -3.160000e-01             -3.160884e-01             -8.840101e-05        8.840101e-05   
+fr3_joint3_xyz_z               0.000000e+00              5.754544e-04              5.754544e-04         5.754544e-04   
+fr3_joint3_rpy_roll            1.570796e+00              1.567052e+00              -3.744628e-03        3.744628e-03   
+fr3_joint3_rpy_pitch           0.000000e+00              5.184774e-04              5.184774e-04         5.184774e-04   
+fr3_joint3_rpy_yaw             0.000000e+00              3.084636e-03              3.084636e-03         3.084636e-03   
+fr3_joint4_xyz_x               8.250000e-02              8.193352e-02              -5.664838e-04        5.664838e-04   
+fr3_joint4_xyz_y               0.000000e+00              -2.364256e-05             -2.364256e-05        2.364256e-05   
+fr3_joint4_xyz_z               0.000000e+00              9.350245e-05              9.350245e-05         9.350245e-05   
+fr3_joint4_rpy_roll            1.570796e+00              1.570404e+00              -3.920652e-04        3.920652e-04   
+fr3_joint4_rpy_pitch           0.000000e+00              6.867291e-04              6.867291e-04         6.867291e-04   
+fr3_joint4_rpy_yaw             0.000000e+00              -5.023309e-04             -5.023309e-04        5.023309e-04   
+fr3_joint5_xyz_x               -8.250000e-02             -8.266966e-02             -1.696552e-04        1.696552e-04   
+fr3_joint5_xyz_y               3.840000e-01              3.842568e-01              2.567660e-04         2.567660e-04   
+fr3_joint5_xyz_z               0.000000e+00              2.313617e-05              2.313617e-05         2.313617e-05   
+fr3_joint5_rpy_roll            -1.570796e+00             -1.572027e+00             -1.230971e-03        1.230971e-03   
+fr3_joint5_rpy_pitch           0.000000e+00              -1.535341e-04             -1.535341e-04        1.535341e-04   
+fr3_joint5_rpy_yaw             0.000000e+00              -7.282354e-04             -7.282354e-04        7.282354e-04   
+fr3_joint6_xyz_x               0.000000e+00              1.391541e-04              1.391541e-04         1.391541e-04   
+fr3_joint6_xyz_y               0.000000e+00              2.977168e-04              2.977168e-04         2.977168e-04   
+fr3_joint6_xyz_z               0.000000e+00              2.581324e-04              2.581324e-04         2.581324e-04   
+fr3_joint6_rpy_roll            1.570796e+00              1.564039e+00              -6.757180e-03        6.757180e-03   
+fr3_joint6_rpy_pitch           0.000000e+00              -1.856390e-04             -1.856390e-04        1.856390e-04   
+fr3_joint6_rpy_yaw             0.000000e+00              -1.534388e-04             -1.534388e-04        1.534388e-04   
+fr3_joint7_xyz_x               8.800000e-02              8.872933e-02              7.293342e-04         7.293342e-04   
+fr3_joint7_xyz_y               0.000000e+00              5.584350e-06              5.584350e-06         5.584350e-06   
+fr3_joint7_xyz_z               0.000000e+00              -2.929217e-04             -2.929217e-04        2.929217e-04   
+fr3_joint7_rpy_roll            1.570796e+00              1.570881e+00              8.480967e-05         8.480967e-05   
+fr3_joint7_rpy_pitch           0.000000e+00              7.386570e-06              7.386570e-06         7.386570e-06   
+fr3_joint7_rpy_yaw             0.000000e+00              1.827102e-04              1.827102e-04         1.827102e-04   
+========================================================================================================================
+Total optimization steps: 7
+Parameters with significant changes: 37
+========================================================================================================================
+

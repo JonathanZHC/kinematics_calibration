@@ -1,0 +1,156 @@
+haocheng@haocheng-Alienware-m15-R6:~/kinematics_calibration/scripts$ python3 run_optimizer.py --model fr3 --data fr3_1/front
+Output path:  /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1
+False
+/home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link0.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link0.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link1.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link1.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link2.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link2.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link3.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link3.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link4.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link4.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link5.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link5.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link6.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link6.dae
+Unable to resolve filename: /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link7.dae
+Can't find /home/tueilsyst01/fr3_description/meshes/robot_arms/fr3/visual/link7.dae
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint1']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint2']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint3']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint4']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint5']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint6']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint7']
+Link with name base does not has a parent. Link name is skipped.
+Link with name base does not has a parent. Link name is skipped.
+Tool position: front
+Mean 1: [ 0.52725459  0.00126671 -0.01137022]
+Mean 2: [ 0.52681338  0.05082366 -0.01154894]
+Distance error: 0.00044075963963483705
+Mean absolute error: 0.005670315688570508
+Standard deviation: 0.005917988662552826
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+      solver  :   t_proc      (avg)   t_wall      (avg)    n_eval
+callback_fun  | 738.00us ( 92.25us) 739.51us ( 92.44us)         8
+haocheng@haocheng-Alienware-m15-R6:~/kinematics_calibration/scripts$ python3 run_optimizer.py --model fr3 --data fr3_1/front_left
+Output path:  /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1
+True
+/home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint1']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint2']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint3']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint4']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint5']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint6']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint7']
+Link with name base does not has a parent. Link name is skipped.
+Link with name base does not has a parent. Link name is skipped.
+Tool position: front_left
+Mean 1: [ 0.40422788  0.28177799 -0.0104915 ]
+Mean 2: [ 0.40398819  0.33098854 -0.00952004]
+Distance error: 0.0007792807312007807
+Mean absolute error: 0.00512663537727718
+Standard deviation: 0.005433051220886325
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+      solver  :   t_proc      (avg)   t_wall      (avg)    n_eval
+callback_fun  | 828.00us (103.50us) 828.24us (103.53us)         8
+       nlp_f  |   1.14ms (142.50us)   1.14ms (142.02us)         8
+  nlp_grad_f  |   3.26ms (362.33us)   3.26ms (362.76us)         9
+  nlp_hess_l  |  66.77ms (  9.54ms)  66.86ms (  9.55ms)         7
+       total  |  75.50ms ( 75.50ms)  75.57ms ( 75.57ms)         1
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/fr3.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_0/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_0/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_1/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_1/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_2/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_2/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_3/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_3/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_4/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_4/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_5/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_5/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_6/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_6/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_7/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_7/model.urdf
+Tool position: front_left
+Mean 1: [ 0.40565485  0.27954431 -0.01449476]
+Mean 2: [ 0.40611455  0.32952406 -0.01399586]
+Distance error: 1.5645444654842355e-05
+Mean absolute error: 0.0007684345015564488
+Standard deviation: 0.0008541044773402457
+

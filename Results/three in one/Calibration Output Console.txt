@@ -1,0 +1,114 @@
+haocheng@haocheng-Alienware-m15-R6:~/kinematics_calibration/scripts$ python3 run_optimizer.py --model fr3 --data fr3_1/front fr3_1/front_left fr3_1/front_right
+Output path:  /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1
+True
+/home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint1']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint1']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint2']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint2']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint3']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint3']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint4']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint4']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint5']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint5']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint6']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint6']
+Unknown attribute "D" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "K" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='fr3']/joint[@name='fr3_joint7']/dynamics
+Unknown tag "position_based_velocity_limits" in /robot[@name='fr3']/joint[@name='fr3_joint7']
+Link with name base does not has a parent. Link name is skipped.
+Link with name base does not has a parent. Link name is skipped.
+Tool position: front
+Mean 1: [ 0.52725459  0.00126671 -0.01137022]
+Mean 2: [ 0.52681338  0.05082366 -0.01154894]
+Distance error: 0.00044075963963483705
+Mean absolute error: 0.005670315688570508
+Standard deviation: 0.005917988662552826
+Tool position: front_left
+Mean 1: [ 0.40422788  0.28177799 -0.0104915 ]
+Mean 2: [ 0.40398819  0.33098854 -0.00952004]
+Distance error: 0.0007792807312007807
+Mean absolute error: 0.00512663537727718
+Standard deviation: 0.005433051220886325
+Tool position: front_right
+Mean 1: [ 0.44988081 -0.278729   -0.01230353]
+Mean 2: [ 0.44762125 -0.22898947 -0.01223153]
+Distance error: 0.00020912511526492705
+Mean absolute error: 0.006201054983855561
+Standard deviation: 0.00643477010694007
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+      solver  :   t_proc      (avg)   t_wall      (avg)    n_eval
+callback_fun  |   1.03ms ( 94.00us)   1.04ms ( 94.20us)        11
+       nlp_f  |   4.40ms (400.09us)   4.38ms (398.58us)        11
+  nlp_grad_f  |  12.81ms (  1.07ms)  12.83ms (  1.07ms)        12
+  nlp_hess_l  | 274.21ms ( 27.42ms) 274.20ms ( 27.42ms)        10
+       total  | 296.87ms (296.87ms) 296.85ms (296.85ms)         1
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/fr3.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_0/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_0/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_1/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_1/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_2/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_2/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_3/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_3/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_4/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_4/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_5/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_5/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_6/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_6/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_7/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_7/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_8/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_8/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_9/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_9/model.urdf
+Modified URDF saved to /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_10/model.urdf
+Modified URDF saved as: /home/haocheng/kinematics_calibration/calibrated_urdf/fr3_1/step_10/model.urdf
+Tool position: front
+Mean 1: [ 0.52696273 -0.00199533 -0.01482413]
+Mean 2: [ 0.52730643  0.04793436 -0.01460298]
+Distance error: 6.864482925503235e-05
+Mean absolute error: 0.0007458756489403448
+Standard deviation: 0.0008283635949199593
+Tool position: front_left
+Mean 1: [ 0.40560641  0.27881684 -0.01408439]
+Mean 2: [ 0.40605301  0.32880463 -0.0135632 ]
+Distance error: 7.507503864925824e-06
+Mean absolute error: 0.0008120638594119286
+Standard deviation: 0.0008999605577229793
+Tool position: front_right
+Mean 1: [ 0.44745492 -0.28147359 -0.01484121]
+Mean 2: [ 0.44784922 -0.23144275 -0.01502064]
+Distance error: 3.271985331335797e-05
+Mean absolute error: 0.0006835760279186911
+Standard deviation: 0.0007557293732219641
+
