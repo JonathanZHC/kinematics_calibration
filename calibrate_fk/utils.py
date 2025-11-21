@@ -718,7 +718,7 @@ def extract_kinematics(urdf_path, threshold=1e-6):
                 else:
                     filtered_kin[key] = val
 
-            output_data[f"joint{idx}"] = {"kinematics": filtered_kin}
+            output_data[f"joint{idx}"] = {"kinematic": filtered_kin}
 
     # Save YAML
     save_path = os.path.join(os.path.dirname(urdf_path), "kinematics.yaml")
