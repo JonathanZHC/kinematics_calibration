@@ -104,26 +104,26 @@ Then you can run all the scripts as:
 python3 run_optimizer.py --model <nomial_urdf_name> --data <path/to/data/folder> 
 ```
 
-The nomial model needs to be in the **urdf** folder. For example panda.urdf. The data are the one saved in the previous step. For example panda_1/front. 
-This script runs the optimazation and prints the result. It outputs a new `urdf` model with the same name of the original one, e.g. panda.urdf but located in the **calibrated_urdf** folder and subfolder of the id that we gave to that robot, e.g. panda_1. So now if you browse to calibrated_urdf/panda_1 you will find your panda.urdf that contains calibrated parameters. 
+The nomial model needs to be in the **urdf** folder. For example fr3.urdf. The data are the one saved in the previous step. For example fr3_1/front. 
+This script runs the optimazation and prints the result. It outputs a new `urdf` model with the same name of the original one, e.g. fr3.urdf but located in the **calibrated_urdf** folder and subfolder of the id that we gave to that robot, e.g. fr3_1. So now if you browse to calibrated_urdf/fr3_1 you will find your fr3.urdf that contains calibrated parameters and kinematics.yaml that can be directly integrate into franka_description repository.
 ```bash
-python3 run_optimizer.py --model panda --data panda_1/front
+python3 run_optimizer.py --model fr3 --data fr3_1/front
 ``` 
 
 Training on one position is sufficient but training on multiple tool position that are placed in different parts of the workspace, is as easy as specifying their path in the --data input, for example: 
 ```bash
-python3 run_optimizer.py --model panda --data panda_1/front panda_1/left panda_1/right panda_1/high
+python3 run_optimizer.py --model fr3 --data fr3_1/front fr3_1/left fr3_1/right fr3_1/high
 ``` 
 The optimization will now try to maximize the consistency in any of the sockets of each tool and the bias in the predicted distance between the two sockets. 
-![alt text](imgs/bar_plot_panda_2.jpg)
+![alt text](imgs/bar_plot_fr3_2.jpg)
 In this plot we trained and evaluated on different positions of the tool or in all of them. You can see that even when training only on the front, the final accuracy on the right-high position, is still good. By training on all the position, the performace goes low everywhere. 
 ## Plot the learning curves
 To diplay how good the model gets, we diplay the learning and the validation curves by running 
 
 ```bash
-python3 generate_learning_curve.py --model panda_1
+python3 generate_learning_curve.py --model fr3_1
 ```
-This will display the consistency and the distortion of the model both on the training set but also in any other of the dataset that is in the folder data/panda_1. 
+This will display the consistency and the distortion of the model both on the training set but also in any other of the dataset that is in the folder data/fr3_1. 
 For example:
 <p float="left">
   <img src="imgs/consistency.png" alt="Consistency" width="300" />
@@ -137,7 +137,7 @@ The right figure shows the distortion of the robot, i.e. the error in the distan
 You can evaluate the calibrated model
 
 ```bash
-python3 compute_improved_performance.py  --model panda_1
+python3 compute_improved_performance.py  --model fr3_1
 ```
 
 The terminal will output the following statistics:
@@ -152,7 +152,7 @@ We can read that on the training set but also in the test set, 95 % of the consi
 ### Visualize the overlay of the robot prediction
 You can generate also an overlay of the robot in the different configurations that were recorded. For example 
 ```bash
-python3 generate_overlay.py  --model panda_1 --data panda_1/front 
+python3 generate_overlay.py  --model fr3_1 --data fr3_1/front 
 ```
 This will prompt a window with a visualization of the robot. Move the view such that you can nicely see the end-effector. Press q in the visualization window to save the camera setting with the point of view.
 If you run the overlay again, you can also avoid to generate all the images of the poses. Just pass the flag --no-generate-images .

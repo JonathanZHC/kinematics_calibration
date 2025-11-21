@@ -5,7 +5,9 @@ import shutil
 import sys
 
 from calibrate_fk.parameter_optimizer import ParameterOptimizer
-from calibrate_fk.utils import check_urdf_path, check_data_path, remove_outliers
+from calibrate_fk.utils import check_urdf_path, check_data_path, remove_outliers, extract_kinematics
+
+
 
 def main():
 
@@ -95,6 +97,10 @@ def main():
     optimizer.evaluate_fks(verbose=True)
     optimizer.optimize(use_dynamic_means=True, use_distortion_error=True, use_regularization=True, saving_steps=saving_steps)
     optimizer.evaluate_fks(verbose=True)
+    
+    # Also export the neew kinematics file
+    new_urdf_path = os.path.abspath(os.path.join(output_path, model + ".urdf"))
+    extract_kinematics(new_urdf_path)
 
 
 if __name__ == "__main__":

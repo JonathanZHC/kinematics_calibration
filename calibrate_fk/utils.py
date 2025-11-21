@@ -14,6 +14,10 @@ import sys
 
 import re
 
+import os
+import yaml
+import xml.etree.ElementTree as ET
+
 def read_data(folder: str, number_samples: Optional[int] = None) -> None:
     # create an empty dictionary to store the data
     data = {} 
@@ -662,3 +666,65 @@ def check_model_path(model_folder: str):
                 continue
             print(f"    {d}")
         sys.exit(1)
+
+def _parse_origin(origin_tag):
+    """Extract xyz and rpy from an <origin> tag."""
+    xyz = origin_tag.attrib.get("xyz", "0 0 0").split()
+    rpy = origin_tag.attrib.get("rpy", "0 0 0").split()
+    return {
+        "x": float(xyz[0]),
+        "y": float(xyz[1]),
+        "z": float(xyz[2]),
+        "roll": float(rpy[0]),
+        "pitch": float(rpy[1]),
+        "yaw": float(rpy[2]),
+    }
+
+def extract_kinematics(urdf_path, threshold=1e-6):
+    """
+    Extract fr3_joint1 ... fr3_joint8 origin(xyz,rpy)
+    and save to kinematics.yaml in the same folder.
+    """
+
+    if not os.path.exists(urdf_path):
+        raise FileNotFoundError(f"URDF not found: {urdf_path}")
+
+    tree = ET.parse(urdf_path)
+    root = tree.getroot()
+
+    # FR3 joints in correct order
+    joint_names = [
+        "fr3_joint1", "fr3_joint2", "fr3_joint3", "fr3_joint4",
+        "fr3_joint5", "fr3_joint6", "fr3_joint7", "fr3_joint8"
+    ]
+
+    output_data = {}
+
+    for joint in root.findall("joint"):
+        name = joint.attrib.get("name", "")
+        if name in joint_names:
+            origin_tag = joint.find("origin")
+            if origin_tag is None:
+                continue
+
+            kin = _parse_origin(origin_tag)
+            idx = joint_names.index(name) + 1
+
+            # value check: only the value larger than the prespecified threshold will be logged
+            filtered_kin = {}
+            for key, val in kin.items():
+                if abs(val) < threshold:
+                    filtered_kin[key] = 0.0
+                else:
+                    filtered_kin[key] = val
+
+            output_data[f"joint{idx}"] = {"kinematics": filtered_kin}
+
+    # Save YAML
+    save_path = os.path.join(os.path.dirname(urdf_path), "kinematics.yaml")
+
+    with open(save_path, "w") as f:
+        yaml.dump(output_data, f, sort_keys=False)
+
+    print(f"Kinematics saved → {save_path}")
+    return save_path
