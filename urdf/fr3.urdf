@@ -561,7 +561,7 @@
   </joint>
   <link name="fr3_link8"/>
   <joint name="fr3_joint8" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0.107"/>
+    <origin rpy="0 0 0" xyz="0 0 0.110"/>
     <parent link="fr3_link7"/>
     <child link="fr3_link8"/>
   </joint>
